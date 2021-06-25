@@ -1,0 +1,22 @@
+<div th:fragment="header">
+    <table>
+        <tr>
+            <td class = "header-td">Klassenbuch	Woche vom <span class="entries">[[${data.getZipCode()}]]</span> bis <span class="entries">[[${data.getZipCode()}]]</span></td>
+            <td class="right"><img class="logo" src="bfz-logo.jpg" alt="logo"></td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <table>
+        <tr>
+            <th style="font-size: 11pt; text-align:center;">Tag</th>
+            <th><span class="sideways_text">Unter-<br>richtsblock</span></th>
+            <th style="font-size: 11pt; text-align:center; padding-left: 2mm; padding-right: 2mm;">Themen-<br>block</th>
+            <th style="font-size: 14pt; text-align:center; padding-left: 4cm; padding-right: 4cm;">Inhalt</th>
+            <th style="font-size: 10pt; text-align:center; font-weight: normal; padding-left: 2mm; padding-right: 2mm;">durch-<br>geführt<br>von</th>
+            <th style="font-size:  8pt; text-align:center; font-weight: normal; padding-left: 2mm; padding-right: 2mm;">im Sonderfall<br>abweichende<br>Schulungszeit<br>mit Uhrzeit<br>und Begründung</th>
+        </tr>
+    </table>
+
+</div>
