@@ -7,6 +7,7 @@ import org.xhtmlrenderer.pdf.ITextRenderer;
 
 import java.io.*;
 import java.nio.file.FileSystems;
+import java.util.List;
 
 import static org.thymeleaf.templatemode.TemplateMode.HTML;
 
@@ -25,7 +26,7 @@ public class FlyingSaucer {
     private static final String UTF_8 = "UTF-8";
 
     @Test
-    public void generatePdf() throws Exception {
+    public void generatePdf(List<Data> data) throws Exception {
 
         // Ich richte eine Thymeleaf-Rendering-Engine ein. Alle Thymeleaf-Vorlagen
         // sind HTML-basierte Dateien, die sich unter "src/test/resources" befinden. Neben der
@@ -45,7 +46,6 @@ public class FlyingSaucer {
         // verwende ich Platzhalter in meinen Templates. Ich fülle diese Platzhalter
         // mit tatsächlichen Daten, indem ich ein Objekt übergeben.
 
-        Data data = CSV_Reader.getListFromCSV();
 
         Context context = new Context();
         context.setVariable("data", data);
