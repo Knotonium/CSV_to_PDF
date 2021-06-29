@@ -1,8 +1,9 @@
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import java.io.File;
 
 public class CSV_Chooser {
-    public static String csvFilePath() {
+    public static File csvFilePath() {
 
         // JFileChooser-Objekt erstellen
         JFileChooser chooser = new JFileChooser();
@@ -18,7 +19,6 @@ public class CSV_Chooser {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             System.out.println(chooser.getSelectedFile().getPath());
         }
-
-        return chooser.getSelectedFile().getPath();
+        return new File(chooser.getSelectedFile().getPath());
     }
 }
